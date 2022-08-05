@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mac Book Pro</title>
+
+    <!-- tailwind css cdn start -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- tailwind css cdn end -->
+
+  <!-- external css start  -->
+  <link rel="stylesheet" href="style/style.css">
+  <!-- external css end -->
+</head>
+<body>
+    <main>
+
+        <!-- product page section start -->
+        <section id="product-page" class="container mx-auto mt-11 mb-10 grid grid-cols-1 justify-items-center lg:grid-cols-2 mx-auto md:mx-auto">
+
+            <!-- product img start -->
+            <div id="product-img">
+                <img class="w-4/6 mb-10 mx-auto" src="images/mac.png" alt="">
+            </div>
+            <!-- product img end -->
+
+            <!-- product detail start -->
+            <div id="product-details" class="w-9/12">
+                <h1 class="text-3xl font-semibold md:text-4xl">Customize your Blue 24-inch iMac with Apple M1 chip.</h1>
+                <p class="mt-3 mb-12 text-sm">Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores, 7-core GPU, and 16-core Neural Engine 8GB unified memory 256GB SSD storage Two Thunderbold / USB 4 ports Magic Mouse Magic Keyboard - US English</p>
+
+                <!-- memory options start -->
+                <div id="memory-options" class="mb-10">
+
+                <h1 class="text-lg text-extrabold mb-3 options-heading">Memory</h1>
+                <button id="memory-default-btn" class="border border-slate-400 mb-2 px-3 py-1 rounded bg-stone-800 text-white lg:mb-0">8GB unified memory</button>
+
+                <button id="extra-memory-btn" class="border border-slate-400 mb-2 px-3 py-1 rounded hover:bg-stone-800 lg:mb-0 hover:text-white">16GB unified memory</button>
+                </div>
+                <!-- memory options end -->
+
+                <!-- storage options start -->
+                <div id="memory-options" class="mb-10">
+
+                <h1 class="text-lg text-black mb-3 options-heading">Storage</h1>
+                <button id="storage-default-btn" class="border border-slate-400 mb-2 px-3 py-1 rounded bg-stone-800 text-white lg:mb-0">256GB SSD storage</button>
+
+                <button id="extra-storage-512-btn" class="border border-slate-400 mb-2 px-3 py-1 rounded hover:bg-stone-800 lg:mb-0 hover:text-white">512GB SSD storage</button>
+
+                <button id="extra-storage-1tb-btn" class="border border-slate-400 mb-2 px-3 py-1 rounded hover:bg-stone-800 lg:mb-0 hover:text-white">1TB SSD storage</button>
+                </div>
+                <!-- storage options end -->
+
+                <!-- delivery options start -->
+                <div id="memory-options" class="mb-10">
+
+                <h1 class="text-lg text-black mb-3 options-heading">Choose your delivery option</h1>
+                <button id="delivery-default-btn" class="border border-slate-400 px-3 py-1 rounded inline-block mb-2 bg-stone-800 text-white -mr-24 md:-mr-0 lg:mb-0">Friday, Aug 25 FREE Prime Delivery</button>
+
+                <button id="early-delivery-btn" class="border border-slate-400 px-3 py-1 rounded hover:bg-stone-800 inline-block mb-2 -mr-24 lg:mb-0 hover:text-white">Monday, Aug 21 Delivery charge $20</button>
+                </div>
+                <!-- delivery options end -->
+
+                <!-- price calculation start -->
+                <div id="total-cost">
+                    <div class="grid grid-row-1 grid-cols-2 gap-3 lg:gap-0">
+                        <h5 class="text-sm text-black my-3 lg:text-lg" >Best Price</h5>
+                        <h5 class="my-3 text-sm text-black lg:text-lg">$1299</h5>
+                    </div>
+                    <hr class="w-3/4 -ml-1 md:w-2/3 -ml-4">
+                    <div class="grid grid-row-1 grid-cols-2 gap-3 lg:gap-0">
+                        <h5 class="text-sm text-black my-3 lg:text-lg">Extra Memory Cost</h5>
+                        <h5 class="my-3 text-sm text-black lg:text-lg">$<span id="extra-memory-cost">0</span></h5>
+                    </div>
+                    <hr class="w-3/4 -ml-1 md:w-2/3 -ml-4">
+                    <div class="grid grid-row-1 grid-cols-2 gap-3 lg:gap-0">
+                        <h5 class="text-sm text-black my-3 lg:text-lg">Extra Storage Cost</h5>
+                        <h5 class="my-3 text-sm text-black lg:text-lg">$<span id="extra-storage-cost">0</span></h5>
+                    </div>
+                    <hr class="w-3/4 -ml-1 md:w-2/3 -ml-4">
+                    <div class="grid grid-row-1 grid-cols-2 gap-3 lg:gap-0">
+                        <h5 class="text-sm text-black my-3 lg:text-lg">Delivery charge</h5>
+                        <h5 class="my-3 text-sm text-black lg:text-lg">$<span id="extra-delivery-cost">0</span></h5>
+                    </div>
+                    <hr id="total-price-hr" class="text-black border border-black w-3/4 -ml-1 md:w-2/3 -ml-4">
+                    <div class="grid grid-row-1 grid-cols-2 gap-3 lg:gap-0">
+                        <h5 class="text-sm text-black my-3 lg:text-lg">Total Price</h5>
+                        <h5 class="my-3 text-sm text-black lg:text-lg">$<span id="total-price">1299</span></h5>
+                    </div>
+                    <hr class="w-3/4 -ml-1 md:w-2/3 -ml-4">
+                </div>
+                <!-- price calculation end -->
+
+                <!-- add promo code start -->
+                <div id="promo-code">
+                    <h5 class="text-lg text-extrabold mt-7 mb-1">Add Promo code</h5>
+                    <input type="text" id="promocode-field" class="border border-inherit rounded mt-1 py-1 px-2">
+                    <button id="apply-promo-btn" class="bg-red-600 text-white rounded mb-1 mt-1 px-2 py-1">Apply</button>
+                    <br>
+                </div>
+                <!-- add promo code end -->
+
+            </div>
+            <!-- product detail end -->
+
+        </section>
+        <!-- product page section end -->
+
+        <!-- bottom total cost start -->
+        <div id="bottom-total-div">
+            <hr class="container mx-auto">
+            <h1 class="text-3xl font-semibold text-center my-4 md:text-4xl">Total: $<span id="bottom-total-cost">1299</span></h1>
+        </div>
+        <!-- bottom total cost end -->
+
+    </main>
+
+    <!-- JavaScript external file start -->
+    <script src="js/script.js"></script>
+    <!-- JavaScript external file end -->
+</body>
+</html>
